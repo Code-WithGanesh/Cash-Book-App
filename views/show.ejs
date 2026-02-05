@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show Table</title>
+    <style>
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Total-Balance</th>
+        </tr>
+
+        <% for(user of result){ %>
+            <tr>
+                <td>
+                    <%= user.id %>
+                </td>
+                <td>
+                    <%= user.type %>
+                </td>
+                <td>
+                    <%= user.amount %>
+                </td>
+                <td>
+                    <%= user.created_at %>
+                </td>
+                <td>
+                    <%=balance %>
+                </td>
+            </tr>
+            <% } %>
+
+    </table>
+    <a href="http://localhost:8080/cash/new">New Entry</a>
+</body>
+
+</html>
